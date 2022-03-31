@@ -66,7 +66,7 @@ function showScore() {
 
     highScores.map(currentScore => console.log(currentScore.name, " : ", currentScore.score))
 
-    console.log("\nIf the scores need to be refreshed let me know to have them updated.")
+    console.log("\nIf the scores need to be refreshed let me know to have them updated by sending me a screenshot.")
     console.log("_____________")
     //  for(q=0; q<highScores.length;q++)
     //    {
