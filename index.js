@@ -34,55 +34,53 @@ var highScores = [{
         score: 50
     }
 ];
-function intro(){
-var userName = readlineSync.question("What's your name? ")
-console.log("\n\nWelcome, "+ userName + "\nLet's begin our Solar System Quiz !\n")
-console.log("_________________")
+
+function intro() {
+    var userName = readlineSync.question("What's your name? ")
+    console.log("\n\nWelcome, " + userName + "\nLet's begin our Solar System Quiz !\n")
+    console.log("_________________")
 }
 
-function play(question, answer){
+function play(question, answer) {
     var userAnswer = readLineSync.question(question)
-    if (userAnswer.toUpperCase()===answer.toUpperCase()){
+    if (userAnswer.toUpperCase() === answer.toUpperCase()) {
         console.log("\nCorrect !");
-        currentScore+=1;
-    }
-    else{
+        currentScore += 1;
+    } else {
         console.log("\nIncorrect")
     }
 }
 
-function game()
-{
-    for(i=o;i<questions.length;i++)
-    {var currentQuestion=question[i]
-    play(currentQuestion.question,currentQuestion.answer)
-}
+function game() {
+    for (i = o; i < questions.length; i++) {
+        var currentQuestion = question[i]
+        play(currentQuestion.question, currentQuestion.answer)
+    }
 }
 
-function showScore()
-{
+function showScore() {
     var tot = questions.length * 10;
- 
-console.log("You scored: "+ currentScore+ " Out of "+ tot+"." );
-console.log("\n\nHigh Scores : \n")
-     
-   highScores.map(currentScore => console.log(currentScore.name, " : ", currentScore.score))
-     
-     console.log("\nIf the scores need to be refreshed let me know to have them updated.")
 
-     //  for(q=0; q<highScores.length;q++)
-//    {
-//      var hscore=highScores[q];
-     
-//      console.log(hscore.name +"   "+ hscore.score)
-//    }
-  // console.table([
- //               {Name: userName, Score: currentScore},
- //               {Name: "Chandy", Score: 50},
- //               {Name: "Situn", Score:40},
- //               {Name: "Jaga", Score:20},
- // ]);
- console.log("_____________")
+    console.log("You scored: " + currentScore + " Out of " + tot + ".");
+    console.log("\n\nHigh Scores : \n")
+
+    highScores.map(currentScore => console.log(currentScore.name, " : ", currentScore.score))
+
+    console.log("\nIf the scores need to be refreshed let me know to have them updated.")
+    console.log("_____________")
+    //  for(q=0; q<highScores.length;q++)
+    //    {
+    //      var hscore=highScores[q];
+
+    //      console.log(hscore.name +"   "+ hscore.score)
+    //    }
+    // console.table([
+    //               {Name: userName, Score: currentScore},
+    //               {Name: "Chandy", Score: 50},
+    //               {Name: "Situn", Score:40},
+    //               {Name: "Jaga", Score:20},
+    // ]);
+    
 }
 
 intro();
