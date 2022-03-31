@@ -1,4 +1,4 @@
-#Solar System Quiz by Chandy
+# Solar System Quiz by Chandy
 
 Hi dear reader,
 This right here is a node.js code which asks the player
