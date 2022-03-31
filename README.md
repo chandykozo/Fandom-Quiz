@@ -1,6 +1,8 @@
 # Solar System Quiz by Chandy
 
-Hi dear reader,
+Hi 
+Dear Reader,
+
 This right here is a node.js code which asks the player
 to play a quiz game of 5 questions on Solar System.
 
